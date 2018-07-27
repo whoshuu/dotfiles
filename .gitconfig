@@ -1,0 +1,13 @@
+[user]
+	name = Huu Nguyen
+	email = whoshuu@gmail.com
+[core]
+	editor = vi
+[push]
+	default = simple
+[credential]
+	helper = cache
+[hub]
+	protocol = ssh
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/

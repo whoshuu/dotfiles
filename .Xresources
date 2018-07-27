@@ -1,0 +1,53 @@
+URxvt*scrollBar: false
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+URxvt*secondaryScreen: 1
+URxvt*secondaryScroll: 0
+URxvt*internalBorder: 15
+URxvt*mouseWheelScrollpage: true
+URxvt*cursorBlink: false
+URxvt*font: xft:Inconsolata\\-g for Powerline:size=21:antialias=true,xft:Sauce Code Pro Nerd Font:pixelsize=12
+! Black
+URxvt*background: #121212
+! White
+URxvt*foreground: #D9D9D9
+! Black
+URxvt*color0: #121212
+! Gray
+URxvt*color8: #757575
+! Red
+URxvt*color1: #DF9B99
+! Magenta
+URxvt*color9: #E17799
+! Dark Green
+URxvt*color2: #719672
+! Light Green
+URxvt*color10: #98BB99
+! Orange
+URxvt*color3: #E0BC72
+! Yellow
+URxvt*color11: #FFDE98
+! Blue
+URxvt*color4: #96BCDC
+! Light Blue
+URxvt*color12: #BADDFC
+! Light Red
+URxvt*color5: #DFBEBD
+! Light Magenta
+URxvt*color13: #FFBEBD
+! Cyan
+URxvt*color6: #98BCBD
+! Light Cyan
+URxvt*color14: #97DEDF
+! White
+URxvt*color7: #D9D9D9
+! Light White
+URxvt*color15: #E9E9E9
+URxvt.perl-ext-common: font-size
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+URxvt.keysym.C-equal:  perl:font-size:reset
+URxvt.keysym.C-slash:  perl:font-size:show

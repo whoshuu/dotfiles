@@ -1,0 +1,5 @@
+alias grap='grep -iIR'
+alias ls='ls -ahlp --color=always'
+alias rg='rg --smart-case --pretty'
+alias pbcopy='xclip -selection c'
+alias pbpaste='xclip -selection clipboard -o'

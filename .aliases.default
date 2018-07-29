@@ -3,3 +3,13 @@ alias ls='ls -ahlp --color=always'
 alias rg='rg --smart-case --pretty'
 alias pbcopy='xclip -selection c'
 alias pbpaste='xclip -selection clipboard -o'
+alias authors='git shortlog -se | cut -f2 | sort -u'
+alias dlb='git branch -D $(git branch | grep -v "\*" | fzf)'
+
+function dsh {
+    EXECSH="$1"
+    if [ -z "$EXECSH" ]; then
+        EXECSH="sh"
+    fi
+    docker exec -it $(docker ps --format "table {{.Names}}\t{{.Image}}\t{{.ID}}" | sed -n "1!p" | fzf | cut -d " " -f 1) $EXECSH
+}

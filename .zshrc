@@ -98,7 +98,7 @@ bindkey -M vicmd '\e' vi-insert
 zstyle ':completion:*:*:git:*' ignored-patterns 'check-*' 'checkout-*'
 REPORTTIME=30
 
-eval $(gpg-agent --daemon > /dev/null)
+[[ -z $(ps aux | grep gpg-agent | grep -v grep) ]] && eval $(gpg-agent --daemon)
 
 ## [SRC] Extra sources ##
 [ -f ~/.exports.default ] && source ~/.exports.default

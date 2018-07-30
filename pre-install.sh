@@ -11,6 +11,7 @@
 #  [DCK] Docker         #
 #  [CHR] Chrome         #
 #  [SPT] Spotify        #
+#  [RGP] Ripgrep        #
 #                       #
 #  ######################
 
@@ -60,3 +61,8 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79
 echo 'deb http://repository.spotify.com stable non-free' | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt update
 sudo apt install -y spotify-client
+
+## [RGP] Ripgrep ##
+# Downloaded via:
+#   curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep_0.8.1_amd64.deb
+sudo dpkg -i ripgrep_0.8.1_amd64.deb

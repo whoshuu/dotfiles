@@ -5,6 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
+Plug 'jremmen/vim-ripgrep'
 
 " Nerdtree
 Plug 'scrooloose/nerdtree'
@@ -26,6 +27,8 @@ Plug 'myusuf3/numbers.vim'
 Plug 'whoshuu/tabline.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'flazz/vim-colorschemes'
+Plug 'chriskempson/base16-vim'
 
 " Misc
 Plug 'vim-scripts/AnsiEsc.vim'
@@ -37,6 +40,7 @@ call plug#end()
 let g:seoul256_background = 233
 colorscheme seoul256
 set background=dark
+set regexpengine=1
 set scrolloff=5
 set hidden
 set wildmenu

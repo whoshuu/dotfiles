@@ -23,7 +23,6 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'rhysd/vim-clang-format'
 
 " Aesthetic
-Plug 'myusuf3/numbers.vim'
 Plug 'whoshuu/tabline.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-fugitive'

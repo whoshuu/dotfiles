@@ -7,43 +7,45 @@ URxvt*secondaryScroll: 0
 URxvt*internalBorder: 15
 URxvt*mouseWheelScrollpage: true
 URxvt*cursorBlink: false
-URxvt*font: xft:Inconsolata\\-g for Powerline:size=21:antialias=true,xft:Sauce Code Pro Nerd Font:pixelsize=12
-! Black
-URxvt*background: #121212
-! White
-URxvt*foreground: #D9D9D9
-! Black
-URxvt*color0: #121212
-! Gray
-URxvt*color8: #757575
-! Red
-URxvt*color1: #DF9B99
-! Magenta
-URxvt*color9: #E17799
-! Dark Green
-URxvt*color2: #719672
-! Light Green
-URxvt*color10: #98BB99
-! Orange
-URxvt*color3: #E0BC72
-! Yellow
-URxvt*color11: #FFDE98
-! Blue
-URxvt*color4: #96BCDC
-! Light Blue
-URxvt*color12: #BADDFC
-! Light Red
-URxvt*color5: #DFBEBD
-! Light Magenta
-URxvt*color13: #FFBEBD
-! Cyan
-URxvt*color6: #98BCBD
-! Light Cyan
-URxvt*color14: #97DEDF
-! White
-URxvt*color7: #D9D9D9
-! Light White
-URxvt*color15: #E9E9E9
+URxvt*font: xft:Inconsolata\\-g\ for\ Powerline:size=16:antialias=true,xft:Sauce Code Pro Nerd Font:pixelsize=16
+
+#include ".Xresources.base16"
+
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06
+
 URxvt.perl-ext-common: font-size
 URxvt.keysym.C-Up:     perl:font-size:increase
 URxvt.keysym.C-Down:   perl:font-size:decrease

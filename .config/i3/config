@@ -191,8 +191,8 @@ gaps inner 5
 smart_borders on
 focus_follows_mouse no
 
-exec --no-startup-id xrandr --output HDMI-1-1 --auto --right-of eDP-1-1 --rotate left --mode 3840x2160
-exec --no-startup-id xrandr --output DP-1-2 --auto --right-of HDMI-1-1 --rotate left --mode 3840x2160
+exec --no-startup-id xrandr --output DP-1-3 --auto --right-of eDP-1-1 --mode 2560x1440 --rotate left
+exec --no-startup-id xrandr --output DP-1-1 --auto --right-of DP-1-3 --mode 1920x1080
 
 # set key repeat rate
 exec --no-startup-id xset r rate 200 40
@@ -200,5 +200,6 @@ exec --no-startup-id xset r rate 200 40
 # bar
 exec_always --no-startup-id MONITOR=HDMI-1-1 /home/huu/.config/i3/polybar.sh
 exec_always --no-startup-id MONITOR=eDP-1-1 /home/huu/.config/i3/polybar.sh
-exec_always --no-startup-id MONITOR=DP-1-2 /home/huu/.config/i3/polybar.sh
+exec_always --no-startup-id MONITOR=DP-1-3 /home/huu/.config/i3/polybar.sh
+exec_always --no-startup-id MONITOR=DP-1-1 /home/huu/.config/i3/polybar.sh
 exec --no-startup-id dconf write /org/gnome/desktop/interface/cursor-size 20

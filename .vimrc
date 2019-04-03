@@ -37,6 +37,7 @@ call plug#end()
 """ Aesthetics """
 
 let g:seoul256_background = 233
+"colorscheme base16-atlas
 colorscheme seoul256
 set background=dark
 set regexpengine=1
@@ -82,12 +83,19 @@ highlight LineNr ctermfg=Gray ctermbg=Black
 highlight CursorLineNr ctermfg=Blue ctermbg=Black
 highlight Search ctermfg=Black ctermbg=Yellow
 highlight VertSplit ctermfg=0 ctermbg=0
+"highlight ColorColumn ctermbg=233
+"highlight CursorLine ctermbg=233
+"highlight StatusLine ctermfg=233 ctermbg=Blue
 highlight ColorColumn ctermbg=234
 highlight CursorLine ctermbg=234
 highlight StatusLine ctermfg=233 ctermbg=Blue
 highlight TabLineSel ctermfg=White ctermbg=Black
 highlight TabLine ctermfg=Gray ctermbg=Black
 highlight TabLineFill ctermfg=Black ctermbg=Gray
+"highlight VertSplit ctermfg=Black ctermbg=Black
+"highlight ColorColumn ctermbg=Blue
+"highlight CursorLine ctermbg=Blue
+"highlight StatusLine ctermfg=Blue ctermbg=Blue
 
 highlight ExtraWhitespace ctermbg=Red
 

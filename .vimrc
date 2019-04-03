@@ -96,7 +96,7 @@ highlight ExtraWhitespace ctermbg=Red
 " Leader
 let mapleader=","
 if has('nvim')
-    nnoremap <silent> <Leader>g :Te<CR>:term tig<CR>
+    nnoremap <silent> <Leader>g :Te<CR>:term tig<CR>a
 else
     nnoremap <silent> <Leader>g :!tig<CR>
 endif

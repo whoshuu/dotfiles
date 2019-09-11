@@ -13,3 +13,23 @@ function dsh {
     fi
     docker exec -it $(docker ps --format "table {{.Names}}\t{{.Image}}\t{{.ID}}" | sed -n "1!p" | fzf | cut -d " " -f 1) $EXECSH
 }
+
+function dkill {
+    CONTAINER=$(docker ps --format "table {{.Names}}\t{{.Image}}\t{{.ID}}" | sed -n "1!p" | fzf | cut -d " " -f 1)
+    read choice"?Remove docker container ${CONTAINER}? (y/n) "
+    case "$choice" in
+        y|Y ) docker rm -f ${CONTAINER};;
+        n|N ) echo -e "\Aborting";;
+        * ) echo -e "\nPlease type y or n, exiting";;
+    esac
+}
+
+function tkill {
+    SESSION=$(tmux ls | fzf | cut -d ":" -f 1)
+    read choice"?Kill tmux session: ${SESSION}? (y/n) "
+    case "$choice" in
+        y|Y ) tmux kill-session -t ${SESSION};;
+        n|N ) echo -e "\Aborting";;
+        * ) echo -e "\nPlease type y or n, exiting";;
+    esac
+}

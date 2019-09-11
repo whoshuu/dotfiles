@@ -194,6 +194,8 @@ focus_follows_mouse no
 exec --no-startup-id xrandr --output DP-1-3 --auto --right-of eDP-1-1 --mode 2560x1440 --rotate left
 exec --no-startup-id xrandr --output DP-1-1 --auto --right-of DP-1-3 --mode 1920x1080
 
+bindsym $mod+Shift+n exec google-chrome
+
 # set key repeat rate
 exec --no-startup-id xset r rate 200 40
 

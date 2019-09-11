@@ -99,6 +99,7 @@ bindkey -M vicmd '\e' vi-insert
 ## [CMP] Completions ##
 zstyle ':completion:*:*:git:*' ignored-patterns 'check-*' 'checkout-*'
 REPORTTIME=30
+[ -f /usr/local/bin/aws_zsh_completer.sh ] && source /usr/local/bin/aws_zsh_completer.sh
 
 ## [DMN] Daemons ##
 [[ -z $(ps aux | grep gpg-agent | grep -v grep) ]] && eval $(gpg-agent --daemon)

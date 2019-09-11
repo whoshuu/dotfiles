@@ -27,6 +27,7 @@ autoload -Uz compinit
 compinit
 bindkey "^R" history-incremental-search-backward
 bindkey "^F" history-incremental-search-forward
+setopt INTERACTIVE_COMMENTS
 
 ## [HST] History ##
 HISTFILE=~/.zsh/.histfile

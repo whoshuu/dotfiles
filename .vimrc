@@ -118,6 +118,8 @@ nnoremap <silent> <Leader>t :Files<CR>
 nnoremap <silent> <Leader>f :Rg<Space>
 vnoremap <silent> <Leader>f y:Rg <C-R>"<CR>
 
+command! -bang ProjectFiles call fzf#vim#files('$PROJECT_DIR', <bang>0)
+
 " Sort selected block in Visual mode or all text in Command mode
 map <silent> <Leader>s :sort u<CR>
 
@@ -129,6 +131,7 @@ nnoremap <silent> <C-h> <C-w>h
 nnoremap <silent> <C-j> <C-w>j
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
+nnoremap <silent> <C-g> :ProjectFiles<CR>
 
 " Tab navigation
 nnoremap <silent> <C-t> :Te<CR>
@@ -212,6 +215,7 @@ function! WrapCommand(direction, prefix)
         endtry
     endif
 endfunction
+autocmd BufEnter * if expand("%:p:h") !~ '^/tmp' | silent! lcd %:p:h | endif
 
 " <C-Home> and <C-End> go up and down the location list and wrap around
 nnoremap <silent> m :call WrapCommand('down', 'l')<CR>
